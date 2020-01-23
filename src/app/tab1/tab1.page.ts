@@ -14,8 +14,8 @@ movies;
 
   ionViewWillEnter() { 
     this.http
-    .get('https://api.themoviedb.org/3/movie/550?api_key=f022620a05af8fe4fa6be3e95ed6345e')
+    .get('https://api.themoviedb.org/3/movie/popular?api_key=f022620a05af8fe4fa6be3e95ed6345e')
     .toPromise()
-    .then(movies => this.movies = movies);
+    .then(movies=>this.movies=movies.results);
     };
   }

@@ -8,61 +8,23 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+<ion-content>
+  <ion-card-header>
+    <ion-card-title><strong>Populaires</strong></ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
 
-<ion-content *ngIf="movies">
-
-      <ion-card-header>
-        <ion-card-title><strong>Populaires</strong></ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-
-      </ion-card-content>
-<ion-grid>
-  <ion-row>
-    <ion-col>
-      <div>
-        <img [src]="'https://image.tmdb.org/t/p/w200' + movies.poster_path" />
-          <p class="title">{{ movies.title }}</p>
-          <div class="double">
-            <p class="year">{{ movies.release_date | date:'yyyy' }}</p>
-            <ion-icon name="star" class="star"></ion-icon><p class="note">{{ movies.vote_average }}</p>  
-          </div> 
-       </div>
-    </ion-col>
-    <ion-col>
-      <div>
-        <img [src]="'https://image.tmdb.org/t/p/w200' + movies.poster_path" />
-          <p class="title">{{ movies.title }}</p>
-          <div class="double">
-            <p class="year">{{ movies.release_date | date:'yyyy' }}</p>
-            <ion-icon name="star" class="star"></ion-icon><p class="note">{{ movies.vote_average }}</p>  
-          </div> 
-       </div>
-    </ion-col>
-  </ion-row>
-
-
-  <ion-row>
-    <ion-col>
-      <div>
-        <img [src]="'https://image.tmdb.org/t/p/w200' + movies.poster_path" />
-          <p class="title">{{ movies.title }}</p>
-          <div class="double">
-            <p class="year">{{ movies.release_date | date:'yyyy' }}</p>
-            <ion-icon name="star" class="star"></ion-icon><p class="note">{{ movies.vote_average }}</p>  
-          </div> 
-       </div>
-    </ion-col>
-    <ion-col>
-      <div>
-        <img [src]="'https://image.tmdb.org/t/p/w200' + movies.poster_path" />
-          <p class="title">{{ movies.title }}</p>
-          <div class="double">
-            <p class="year">{{ movies.release_date | date:'yyyy' }}</p>
-            <ion-icon name="star" class="star"></ion-icon><p class="note">{{ movies.vote_average }}</p>  
-          </div> 
-       </div>
-    </ion-col>
-  </ion-row>
-</ion-grid>  
+  </ion-card-content>
+    <ion-grid>
+      <ion-row *ngIf="movies">
+        <ion-col size="6" *ngFor="let movie of movies">
+          <img [src]="'https://image.tmdb.org/t/p/w200' + movie.poster_path" />
+          <p class="title">{{ movie.title }}</p>
+            <div class="double">
+              <p class="year">{{ movie.release_date | date:'yyyy' }}</p>
+              <ion-icon name="star" class="star"></ion-icon><p class="note">{{ movie.vote_average }}</p>  
+            </div>
+        </ion-col>      
+      </ion-row>
+    </ion-grid>  
 </ion-content>
