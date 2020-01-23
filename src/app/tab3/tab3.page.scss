@@ -1,1 +1,35 @@
 
+
+.title {
+    margin: 5px;
+    position: relative;
+    right: 5px;
+    font-size: 15px;
+}
+.year {
+    margin: 5px;
+    color: grey;
+    position: relative;
+    right: 5px;
+    top: 22px;
+    font-size: 12px;
+}
+.star {
+    position: relative;
+    left: 60%;
+    font-size: 12px;
+}
+.note {
+    margin: 0;
+    position: relative;
+    left: 80%;
+    bottom: 17px;
+    font-size: 12px;
+}
+.double {
+    position: relative;
+    bottom: 25px;
+}
+img {
+    border-radius: 8px 8px 8px 8px;
+}
