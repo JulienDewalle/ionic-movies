@@ -1,8 +1,11 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title class="ion-text-center">
-      Movies
-    </ion-title>
+    <ion-title class="ion-text-center">Movies</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -18,7 +21,7 @@
   <ion-row>
     <ion-col>
       <div>
-        <ion-img [src]="movies.logo_path"></ion-img>
+        <img [src]="'https://image.tmdb.org/t/p/w200' + movies.poster_path" />
           <p class="title">{{ movies.title }}</p>
           <div class="double">
             <p class="year">{{ movies.release_date | date:'yyyy' }}</p>
@@ -28,7 +31,7 @@
     </ion-col>
     <ion-col>
       <div>
-        <ion-img [src]="movies.poster_path"></ion-img>
+        <img [src]="'https://image.tmdb.org/t/p/w200' + movies.poster_path" />
           <p class="title">{{ movies.title }}</p>
           <div class="double">
             <p class="year">{{ movies.release_date | date:'yyyy' }}</p>
@@ -42,7 +45,7 @@
   <ion-row>
     <ion-col>
       <div>
-        <ion-img [src]="movies.poster_path"></ion-img>
+        <img [src]="'https://image.tmdb.org/t/p/w200' + movies.poster_path" />
           <p class="title">{{ movies.title }}</p>
           <div class="double">
             <p class="year">{{ movies.release_date | date:'yyyy' }}</p>
@@ -52,7 +55,7 @@
     </ion-col>
     <ion-col>
       <div>
-        <ion-img [src]="movies.poster_path"></ion-img>
+        <img [src]="'https://image.tmdb.org/t/p/w200' + movies.poster_path" />
           <p class="title">{{ movies.title }}</p>
           <div class="double">
             <p class="year">{{ movies.release_date | date:'yyyy' }}</p>
